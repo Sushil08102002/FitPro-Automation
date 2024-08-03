@@ -9,8 +9,10 @@ let driver;
       await driver.manage().window().maximize();
       await home.OpenHomePage(driver);
       await home.NavigatetoRevenueCalcuator(driver);
-      await home.Scroll(driver);
-    //   await home.navigateToRevenueCalculator(driver);
+      await home.UpdateTextField(driver);
+      await home.AdjustSlider(driver);    //   await home.navigateToRevenueCalculator(driver);
+      await home.checkBox(driver);
+      await home.validateReimbursement(driver);
     } finally {
       await driver.quit();
     }
